@@ -1,0 +1,21 @@
+server:
+  port: 1111
+  shutdown: "graceful"
+  error.include-binding-errors: always
+  error.include-exception: true
+notification.host: "localhost"
+notification.url: "http://${notification.host}:2222/mail"
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: "20s"
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    url: jdbc:h2:file:./db/micro-db
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: create
+    open-in-view: false
+    properties.hibernate.jdbc.batch_size: 10
+    properties.hibernate.order_inserts: true

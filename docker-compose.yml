@@ -1,0 +1,16 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  smtp:
+    image: munkyboy/fakesmtp
+  notification:
+    image: notification
+    ports:
+      - "2222:2222"
+    environment:
+      - spring.mail.host=smtp
+  user:
+    image: user
+    ports:
+      - "1111:1111"
+    environment:
+      - notification.host=notification

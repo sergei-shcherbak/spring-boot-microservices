@@ -47,7 +47,7 @@ Unix
 
 
 # How to use
-This project uses [Swagger API documentation](https://github.com/swagger-api).
+This project uses [Swagger API documentation](https://github.com/swagger-api).  
 After the deploying stage on your local machine,    
 the swagger endpoint should be available for running rest commands.    
 The default address is http://localhost:1111/swagger-ui/
